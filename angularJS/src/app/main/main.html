@@ -1,0 +1,63 @@
+<input type="text" placeholder="userName" ng-model='userName'>
+<input type="button" value="Enregistrer" ng-click="main.setLocalStorageUserName(userName)">
+<br />
+userName from localStorage: {{main.userNameSaved}}
+
+<div class="container">
+  <div class="box text-box">
+    Nouveau message
+    <div>
+      <textarea ng-model="main.message"></textarea>
+      {{main.message}}
+      <div class="textarea-count">
+        0 / 100
+        <div class="box-button" ng-click="main.sendMessage()">Envoyer</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="categ-title"></div>
+
+  <div class="response-box" ng-repeat='message in main.messages'>
+    <div class="box response-message">
+      <div class="message-pic">
+        <img src="{{message.gravatarUrl}}"/>
+      </div>
+      <div class="message-content">
+        <span class="message-author">{{message.userName}}: {{message.mail}}</span>
+        <div class="message-value">{{message.msg}}</div>
+        <div class="message-time">{{message.sendDate | ago}}</div>
+        <div class="message-more">
+          <span ng-click='main.displayComments(message)'>Voir les réponses <i class="fa fa-caret-down"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <ng-comment data='message'></ng-comment>
+    </div>
+<!--
+    <div class="box response-comment" ng-repeat='comment in message.comments' ng-if='message.showComments'>
+      <div class="comment-pic">
+        <img src="{{comment.gravatarUrl}}"/>
+      </div>
+      <div class="comment-content" >
+        <span class="message-author">{{message.userName}}: {{message.mail}}</span>
+        <div class="message-value">{{message.msg}}</div>
+        <div class="message-time">{{message.sendDate| ago}}</div>
+      </div>
+    </div>
+    <div class="box response-comment-text">
+      Réponse à ce message
+      <div>
+        <textarea ng-model="message.comment"></textarea>
+        <div class="textarea-count">
+          0 / 100
+          <div class="box-button" ng-click="main.sendComment(message)">Répondre</div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+</div>

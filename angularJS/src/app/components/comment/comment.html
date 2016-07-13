@@ -1,0 +1,20 @@
+<div class="box response-comment" ng-repeat='comment in message.comment' ng-if="message.showComments">
+  <div class="comment-pic">
+    <img src="{{comment.gravatarUrl}}"/>
+  </div>
+  <div class="comment-content" >
+    <span class="message-author">{{comment.userName}}: {{comment.mail}}</span>
+    <div class="message-value">{{comment.msg}}</div>
+    <div class="message-time">{{comment.sendDate| ago}}</div>
+  </div>
+</div>
+<div class="box response-comment-text">
+  Réponse à ce message
+  <div>
+    <textarea></textarea>
+    <div class="textarea-count">
+      0 / 100
+      <div class="box-button">Répondre</div>
+    </div>
+  </div>
+</div>

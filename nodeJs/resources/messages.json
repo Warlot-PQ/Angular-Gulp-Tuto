@@ -1,0 +1,37 @@
+{
+	"messages": [{
+		"id": "1",
+		"userName": "Pierre",
+		"mail": "Pierre@bean.com",
+		"gravatarUrl": "",
+		"msg": "Premier message",
+		"sendDate": "",
+		"comment": [{
+			"id": "2",
+			"userName": "Thomas",
+			"mail": "Thomas@bean.com",
+			"gravatarUrl": "",
+			"msg": "Première réponse",
+			"sendDate": "",
+			"comment": []
+		},
+		{
+			"id": "3",
+			"userName": "Pierre",
+			"mail": "Pierre@bean.com",
+			"gravatarUrl": "",
+			"msg": "Deuxième réponse",
+			"sendDate": "",
+			"comment": []
+		}]
+	},
+	{
+		"id": "4",
+		"userName": "Thomas",
+		"mail": "Thomas@bean.com",
+		"gravatarUrl": "",
+		"msg": "Deuxième message",
+		"sendDate": "",
+		"comment": []
+	}]
+}

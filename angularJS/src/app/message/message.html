@@ -1,0 +1,25 @@
+<div class="response-box">
+  <div class="box response-message">
+    <div class="message-pic">
+      <img src="{{msg.message.gravatarUrl}}"/>
+    </div>
+    <div class="message-content">
+      <span class="message-author">{{msg.message.userName}}: {{msg.message.mail}}</span>
+      <div class="message-value">{{msg.msg}}</div>
+      <div class="message-time">{{msg.message.sendDate | ago}}</div>
+      <div class="message-more">
+        <span ng-click=''>Voir les réponses <i class="fa fa-caret-down"></i></span>
+      </div>
+    </div>
+  </div>
+  <div class="box response-comment" ng-repeat='comment in msg.message.comments'>
+    <div class="comment-pic">
+      <img src="{{comment.gravatarUrl}}"/>
+    </div>
+    <div class="comment-content" >
+      <span class="message-author">{{comment.userName}}: {{comment.mail}}</span>
+      <div class="message-value">{{comment.msg}}</div>
+      <div class="message-time">{{comment.sendDate| ago}}</div>
+    </div>
+  </div>
+</div>
